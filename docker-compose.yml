@@ -4,9 +4,6 @@ services:
   backend:
     image: kleinspeedy/langhelp-backend:latest
     container_name: go-backend
-    restart: unless-stopped
-    ports:
-      - "8080:8080"
     volumes:
       - ./backend:/app
     environment:
@@ -15,6 +12,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_PORT=${MYSQL_PORT}
+    network_mode: host
     depends_on:
       db:
         condition: service_healthy

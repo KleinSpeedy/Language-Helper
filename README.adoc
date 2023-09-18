@@ -2,6 +2,10 @@
 
 Language helper app - main repository
 
+=== Developers:
+
+- Jonas Schulze
+
 === Frontend
 
 Frontend using react with typescript
@@ -21,4 +25,20 @@ Mysql Database
 docker compose up -d
 ----
 
-This starts the service, the frontend is accessible over localhost:3000
+This starts all services, the frontend is accessible over localhost:3000.
+Creating users and logging in can be done via curl.
+
+[source,sh]
+----
+# User creation
+curl -v -X POST localhost:8000/auth/user/create -F username="XXX" -F password="XXX"
+# User login:
+curl -v -X POST localhost:8000/auth/user/login -F username="XXX" -F password="XXX"
+----
+
+== Deutsch - Zusammenfassung
+
+*Disclaimer*: Das Projekt ist sehr unvollständig und nicht fertiggestellt.
+
+*Language Helper* soll eine Website für das lernen von Sprachen sein. Der Nutzer soll über verschiedene Level eine Sprache seiner Wahl lernen. Jede Sprache soll später einmal über verschiedene Level verfügen die der Nutzer nacheinander "durch spielen" muss. Dabei soll der Erfolg für jeden Nutzer gespeichert werden und später in einem Scoreboard einsehbar sein. 
+Das Projekt besteht aus einer *MySQL* Datenbank, einem *React* Frontend und einem Backend aus *Go* und kann einfach über den Docker compose Befehl gestartet werden.
