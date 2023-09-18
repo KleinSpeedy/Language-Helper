@@ -1,3 +1,3 @@
 # Database
 
-TODO: Choose me
+Mysql Database misc and setup scripts.

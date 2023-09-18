@@ -1,0 +1,3 @@
+# Ignore database data
+mysql-data
+.env

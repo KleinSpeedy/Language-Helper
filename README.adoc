@@ -1,0 +1,24 @@
+== language-helper
+
+Language helper app - main repository
+
+=== Frontend
+
+Frontend using react with typescript
+
+=== Backend
+
+Backend using go with gin gonic framework
+
+=== Database
+
+Mysql Database
+
+== Starting the app
+
+[source,sh]
+----
+docker compose up -d
+----
+
+This starts the service, the frontend is accessible over localhost:3000
